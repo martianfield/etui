@@ -1,7 +1,7 @@
 {
   "name": "etui",
-  "version": "0.0.2",
-  "description": "A React UI Library",
+  "version": "1.0.0",
+  "description": "a react UI library",
   "author": "martianfield",
   "license": "MIT",
   "repository": "martianfield/etui",
