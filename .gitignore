@@ -1,0 +1,16 @@
+# Dependency directories
+node_modules
+
+# OSX
+*.DS_Store
+.AppleDouble
+.LSOverride
+
+#  build
+build
+
+# old stuff
+zzz__*
+
+# css we use SASS
+*.css
