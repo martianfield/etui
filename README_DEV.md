@@ -7,6 +7,7 @@
 - clone the repository: `git clone https://github.com/martianfield/etui.git`
 - install dependencies: `npm install`
 - build it: `npm run build`
+- create a symlink in the global folder: `npm link` (so that our test project can link to it, see https://docs.npmjs.com/cli/link)
 
 
 ### Test Project

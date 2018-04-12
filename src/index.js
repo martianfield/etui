@@ -1,11 +1,4 @@
-import React from "react"
+import Label from "./Label"
+import Button from "./Button"
 
-class Fancy extends React.Component {
-    render() {
-        return (
-            <div>Shit this is so bloody fancy!</div>
-        )
-    }
-}
-
-export default Fancy
+export {Label, Button} 

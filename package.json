@@ -17,13 +17,16 @@
     "react": "^15.5.4"
   },
   "dependencies": {
+    "prop-types": "^15.6.1",
     "react": "^15.5.4",
-    "webpack":"^2.6.1"
+    "webpack": "^2.6.1"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "webpack --watch",
-    "build": "webpack"
+    "build": "webpack",
+    "publish": "npm version patch && npm publish",
+    "publish-minor": "npm version minor && npm publish"
   },
   "devDependencies": {
     "babel-cli": "^6.24.1",
