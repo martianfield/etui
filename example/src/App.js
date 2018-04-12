@@ -1,12 +1,14 @@
 import React, { Component } from 'react'
 
-import ExampleComponent from 'etui'
+import ButtonDocumentation  from './doc/Button'
+import ConfirmButtonDocumentation from './doc/ConfirmButton'
 
 export default class App extends Component {
   render () {
     return (
       <div>
-        <ExampleComponent text='Modern React component module' />
+        <ButtonDocumentation />
+        <ConfirmButtonDocumentation />
       </div>
     )
   }
