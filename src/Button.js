@@ -2,7 +2,7 @@ import React from "react"
 import PropTypes from "prop-types"
 import {StyleSheet, css} from "aphrodite"
 
-import cs from "./Common.aphrodite"
+import cs from "./Common.aphrodite" // c(ommon) s(tyling)
 import theme from "./Theme.default"
 
 class Button extends React.Component {
@@ -30,7 +30,7 @@ Button.propTypes = {
     label:PropTypes.string
 }
 
-// Styling
+// l(ocal) s(tyle)
 const ls = StyleSheet.create({
     button: {
         cursor:"pointer",
@@ -39,6 +39,7 @@ const ls = StyleSheet.create({
         color:theme.colors.inverted.foreground
     },
     container : {
+        display:"inline-block",
         padding:"1px"
     }
 })

@@ -1,7 +1,8 @@
 import React, { Component } from 'react'
 
-import ButtonDocumentation  from './doc/Button'
-import ConfirmButtonDocumentation from './doc/ConfirmButton'
+import ButtonDocumentation  from './doc/Button.doc'
+import ConfirmButtonDocumentation from './doc/ConfirmButton.doc'
+import NotificationDocumentation from './doc/Notification.doc'
 
 export default class App extends Component {
   render () {
@@ -9,6 +10,7 @@ export default class App extends Component {
       <div>
         <ButtonDocumentation />
         <ConfirmButtonDocumentation />
+        <NotificationDocumentation />
       </div>
     )
   }
