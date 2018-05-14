@@ -1,6 +1,6 @@
 import defaultTheme from "./Theme.default"
 
-let __theme = {...defaultTheme}
+let __theme = __deepClone(defaultTheme)
 let __timestamp = new Date().getTime()
 
 function __merge(base, override) {
@@ -15,8 +15,20 @@ function __merge(base, override) {
   return base
 }
 
+function __deepClone(obj) {
+  return JSON.parse(JSON.stringify(obj))
+}
+
 function apply(theme) {
-  __theme = __merge({...defaultTheme}, theme)
+  if(theme) {
+    // merge the them with the default theme
+    __theme = __merge(__deepClone(defaultTheme), theme)
+  }
+  else {
+    // apply the default theme
+    __theme = __deepClone(defaultTheme)
+  }
+
   __timestamp = new Date().getTime()
 }
 

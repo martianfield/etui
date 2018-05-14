@@ -1,15 +1,36 @@
 # Development
 
 To start watching and building the library:
-`npm start`
 
-To start the example project development server and watching and compiling SASS
-`cd example`
-`npm start`
-`npm watch-css`
+```
+npm start
+```
 
-# Build
 
+To start the example project development server and watching and compiling SASS:
+
+``` 
+cd example
+npm start
+npm watch-css
+```
+
+
+# Publish to NPM
+
+From within the main directory:
+
+```
+npm publish
+```
+
+# Publish Documentation
+
+From within the main directory:
+
+``` 
+npm run deploy
+```
 
 
 # Notes

@@ -1,17 +1,17 @@
 import React from "react"
 import PropTypes from "prop-types"
 import {css, cx} from 'emotion'
-import Css from "./Button.css.js"
+import Css from "./Button.theme.js"
 
 
 class Button extends React.Component {
   constructor(props) {
     super(props)
-
-    this.Css = Css()
   }
 
   render() {
+    let theme = Css()
+
     // text between opening and closing tag takes precedence
     let text = (typeof this.props.children === "string") ? this.props.children : this.props.label
 
@@ -26,21 +26,21 @@ class Button extends React.Component {
     }
     switch(size) {
       case "small":
-        css_size = this.Css.small //css_small
+        css_size = theme.small //css_small
         break
       case "large":
-        css_size = this.Css.large // css_large
+        css_size = theme.large // css_large
         break
       default:
-        css_size = this.Css.normal // css_normal
+        css_size = theme.normal // css_normal
         break
     }
 
     // disabled / enabled
-    let css_state = this.props.disabled ? this.Css.disabled : this.Css.enabled
+    let css_state = this.props.disabled ? theme.disabled : theme.enabled
 
     return (
-      <button className={`etui-button ${cx(this.Css.button, css_state, css_size )}`}
+      <button className={`etui-button ${cx(theme.button, css_state, css_size )}`}
               onClick={this.onClick}
               disabled={this.props.disabled}>
         <span>
@@ -67,6 +67,7 @@ Button.propTypes = {
   label:PropTypes.string,
   size:PropTypes.oneOf(["small", "medium", "large"])
 }
+
 
 Button.defaultProps = {
   disabled:false,

@@ -26,9 +26,9 @@ export default class App extends Component {
             {/*this.renderMenuItem("Notification", "notification")*/}
           </div>
           <div id="content">
-            <Route exact path="/" component={Start}/>
-            <Route path="/button" component={ButtonDocumentation}/>
-            <Route path="/theme" component={ThemeDocumentation}/>
+            <Route exact path={process.env.PUBLIC_URL + '/'} component={Start}/>
+            <Route path={process.env.PUBLIC_URL + '/button'} component={ButtonDocumentation}/>
+            <Route path={process.env.PUBLIC_URL + '/theme'} component={ThemeDocumentation}/>
             {/*
             <Route path="/confirmbutton" component={ConfirmButtonDocumentation}/>
             <Route path="/notification" component={NotificationDocumentation} />

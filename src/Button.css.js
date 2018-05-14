@@ -5,7 +5,6 @@ let __timestamp = Theme.timestamp()
 let __css = null
 
 function __make() {
-  console.log('making theme ...')
   let theme = Theme.theme()
 
   let button = css`
@@ -75,7 +74,6 @@ function __make() {
     disabled:disabled
   }
 }
-
 
 export default () => {
   if(__css === null || Theme.timestamp() !== __timestamp) {

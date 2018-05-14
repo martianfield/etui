@@ -1,10 +1,17 @@
 import React, { Component } from 'react'
-import {Button} from 'etui'
+import {Button, Theme} from 'etui'
 import Properties from "./Properties"
 import Highlight from 'react-highlight'
 
 
-class ButtonDocumentation extends Component {
+class ButtonDocumentation extends Component {o
+
+  constructor(props) {
+    super(props)
+    // apply default theme
+    Theme.apply()
+  }
+
   properties = [
     {name:'label', description:'The text to display', type:'string', default:`"ok"`},
     {name:'data', type:'any', description:'This is sent to the onClick handler', default:`null` },
