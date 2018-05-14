@@ -1,3 +1,4 @@
+/*
 import React, { Component } from 'react'
 
 import {ConfirmButton} from 'etui'
@@ -6,6 +7,7 @@ class ConfirmButtonDocumentation extends Component {
   render () {
     return (
       <div>
+        <h1>ConfirmButton</h1>
         <ConfirmButton label="delete this" data={{"foo":"bar"}} onConfirm={this.onConfirm} onCancel={this.onCancel} />
       </div>
     )
@@ -21,3 +23,4 @@ class ConfirmButtonDocumentation extends Component {
 }
 
 export default ConfirmButtonDocumentation
+*/

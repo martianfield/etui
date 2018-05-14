@@ -1,0 +1,18 @@
+* {
+  box-sizing: border-box; }
+
+#documentation {
+  display: flex;
+  flex-direction: row; }
+  #documentation #sidebar {
+    max-width: 200px;
+    padding: 8px; }
+
+table.properties {
+  font-weight: 100;
+  font-size: 13px;
+  text-align: left; }
+  table.properties td {
+    padding: 2px 8px 2px 0; }
+  table.properties td.code {
+    font-family: monospace, 'Courier New', Courier; }

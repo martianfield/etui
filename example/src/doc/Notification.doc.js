@@ -1,3 +1,4 @@
+/*
 import React, { Component } from 'react'
 
 import {Button, Notification, NotificationCenter} from 'etui'
@@ -7,6 +8,7 @@ class NotificationDocumentation extends Component {
     let veryLongText = "bag, handbag, pocketbook, purse, clutch, clutch bag, evening bag, étui, reticule, shoulder bag, paper-back book, paperback, paperback book, soft-cover, soft-cover book, softback, softback book"
     return (
       <div>
+        <h1>Notification</h1>
         <Button label='good morning!' data='good morning!' onClick={this.onSendOne} />
         <Button label='hi noon!' data='hi noon!' onClick={this.onSendOne} />
         <Button label='good night Jim Bob.' data='good night Jim Bob.' onClick={this.onSendOne} />
@@ -30,3 +32,4 @@ class NotificationDocumentation extends Component {
 }
 
 export default NotificationDocumentation
+*/

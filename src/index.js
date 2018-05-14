@@ -1,8 +1,10 @@
 import Button from "./Button"
-import ConfirmButton from "./ConfirmButton"
-import Notification from "./Notification"
-import NotificationCenter from "./NotificationCenter"
+import Theme from "./Theme"
+//import ConfirmButton from "./ConfirmButton"
+//import Notification from "./Notification"
+//import NotificationCenter from "./NotificationCenter"
+//import Card from "./Card"
 
-export {Button, ConfirmButton, Notification, NotificationCenter}
+export {Button, Theme}
 
-export default {Button, ConfirmButton, Notification, NotificationCenter}
+//export default {Button}
