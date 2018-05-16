@@ -37,16 +37,19 @@ function __make() {
   let small = css `
     span {
       padding:4px 8px 4px 8px;
+      font-size:${theme.Button.font_size_small};
     }
   `
-  let normal = css `
+  let medium = css `
     span {
       padding:8px 16px 8px 16px;
+      font-size:${theme.Button.font_size_medium};
     }
   `
   let large = css `
     span {
       padding:16px 32px 16px 32px;
+      font-size:${theme.Button.font_size_large};
     }
   `
 
@@ -68,7 +71,7 @@ function __make() {
   return {
     button:button,
     small:small,
-    normal:normal,
+    medium:medium,
     large:large,
     enabled:enabled,
     disabled:disabled

@@ -9,7 +9,10 @@ const button = {
   backgroundColor:"primary_background",
   color:"primary_text",
   backgroundColor_disabled:"primary_background_disabled",
-  color_disabled:"primary_text_disabled"
+  color_disabled:"primary_text_disabled",
+  font_size_small:"12px",
+  font_size_medium:"14px",
+  font_size_large:"18px"
 }
 
 export default {
