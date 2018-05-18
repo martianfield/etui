@@ -21,6 +21,7 @@ npm watch-css
 From within the main directory:
 
 ```
+npm version patch -m '<patch info>'
 npm publish
 ```
 
