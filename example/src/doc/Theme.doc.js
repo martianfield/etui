@@ -9,6 +9,7 @@ class ThemeDocumentation extends React.Component {
     this.themes = {
       green: this.createTheme_green(),
       orange: this.createTheme_orange(),
+      fontsize: this.createTheme_fontsize(),
       default: null
     }
 
@@ -23,6 +24,7 @@ class ThemeDocumentation extends React.Component {
         <Button onClick={this.onSelectTheme} data="green">Green</Button>
         <Button onClick={this.onSelectTheme} data="orange">Orange</Button>
         <Button onClick={this.onSelectTheme} data="default">Default</Button>
+        <Button onClick={this.onSelectTheme} data="fontsize">Large Font</Button>
       </div>
     )
   }
@@ -53,6 +55,16 @@ class ThemeDocumentation extends React.Component {
     }
     return {
       colors:colors
+    }
+  }
+
+  createTheme_fontsize() {
+    return {
+      Button: {
+        font_size_small:"18px",
+        font_size_medium:"24px",
+        font_size_large:"32px"
+      }
     }
   }
 }

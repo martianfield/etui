@@ -20,6 +20,7 @@ export default class App extends Component {
       <Router>
         <div id="documentation">
           <div id="sidebar">
+            {this.renderMenuItem("Start", "start")}
             {this.renderMenuItem("Button", "button")}
             {this.renderMenuItem("Theme", "theme")}
             {/*this.renderMenuItem("ConfirmButton", "confirmbutton")*/}
@@ -27,6 +28,7 @@ export default class App extends Component {
           </div>
           <div id="content">
             <Route exact path={process.env.PUBLIC_URL + '/'} component={Start}/>
+            <Route path={process.env.PUBLIC_URL + '/start'} component={Start}/>
             <Route path={process.env.PUBLIC_URL + '/button'} component={ButtonDocumentation}/>
             <Route path={process.env.PUBLIC_URL + '/theme'} component={ThemeDocumentation}/>
             {/*

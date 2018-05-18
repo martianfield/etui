@@ -5,6 +5,8 @@ import Theme from "./Theme"
 //import NotificationCenter from "./NotificationCenter"
 //import Card from "./Card"
 
+Theme.apply()
+
 export {Button, Theme}
 
 //export default {Button}
