@@ -16,7 +16,8 @@ class ButtonDocumentation extends Component {o
     {name:'label', description:'The text to display', type:'string', default:`"ok"`},
     {name:'data', type:'any', description:'This is sent to the onClick handler', default:`null` },
     {name:'disabled', type:'bool', description:'If set to true, the button is disabled', default:'false'},
-    {name:'size', type:'string', description:`'small', 'medium', or 'large`, default:'medium'}
+    {name:'size', type:'string', description:`'small', 'medium', or 'large`, default:'medium'},
+    {name:'mode', type:'string', description:`'regular', 'cancel', or 'disabled'`, default:'regular'}
   ]
   render () {
     return (
@@ -77,6 +78,23 @@ onButtonClick = (data) => {
         <Button small>small</Button>
         <Button>medium</Button>
         <Button large>large</Button>
+
+
+        <h2>Mode</h2>
+        <p>
+          Display mode. Supported are <code>"regular"</code> (default), <code>"disabled"</code>, and <code>"cancel"</code>.
+        </p>
+        <p>
+          Note: setting the mode to <code>"disabled"</code> will have the same effect as setting the <code>disabled</code> attribute - and vice versa. Also, <code>Disabled</code> takes precedence over other modes.
+        </p>
+        <Highlight language="javascript">{code_mode}</Highlight>
+        <Button mode="regular">regular</Button>
+        <Button mode="disabled">disabled</Button>
+        <Button mode="cancel">cancel</Button>
+        <Button mode="busy">busy</Button>
+
+        <br />
+        <br />
       </div>
     )
   }
@@ -88,3 +106,11 @@ onButtonClick = (data) => {
 }
 
 export default ButtonDocumentation
+
+
+const code_mode = `
+<Button mode="regular">regular</Button>
+<Button mode="disabled">disabled</Button>
+<Button mode="cancel">cancel</Button>
+<Button mode="busy">busy</Button>
+`

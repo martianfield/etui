@@ -2,14 +2,24 @@ let colors = {
   primary_background:"#fa569f",
   primary_text:"white",
   primary_background_disabled:"silver",
-  primary_text_disabled:"white"
+  primary_text_disabled:"white",
+  error:"red",
+  white:"white"
 }
 
 const button = {
   backgroundColor:"primary_background",
   color:"primary_text",
+
   backgroundColor_disabled:"primary_background_disabled",
   color_disabled:"primary_text_disabled",
+
+  backgroundColor_busy:"primary_background_disabled",
+  color_busy:"primary_text_disabled",
+
+  backgroundColor_cancel:"error",
+  color_cancel:"white",
+
   font_size_small:"12px",
   font_size_medium:"14px",
   font_size_large:"18px"

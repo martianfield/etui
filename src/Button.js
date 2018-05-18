@@ -11,13 +11,35 @@ class Button extends React.Component {
     // text between opening and closing tag takes precedence
     let text = (typeof this.props.children === "string") ? this.props.children : this.props.label
 
+    // disabled overrides mode
+    let mode = this.props.disabled ? 'disabled' : this.props.mode
+
+    // disabled mode triggers disabled flag
+    let disabled = this.props.disabled || this.props.mode === 'disabled'
+
+    // loader (if busy
+    let loader = null
+    if(this.props.mode === 'busy') {
+      disabled = true
+      loader = (
+        <div className="etui-loader-container">
+          <div className="etui-loader">
+            <div className="etui-loader-bar"></div>
+            <div className="etui-loader-bar"></div>
+            <div className="etui-loader-bar"></div>
+          </div>
+        </div>
+      )
+    }
+
     return (
-      <button className={`etui-button ${this.props.size}`}
+      <button className={`etui-button size-${this.props.size} mode-${mode}`}
               onClick={this.onClick}
-              disabled={this.props.disabled}>
+              disabled={disabled}>
         <span>
           {text}
         </span>
+        {loader}
       </button>
     )
   }
@@ -37,14 +59,16 @@ Button.propTypes = {
   disabled:PropTypes.bool,
   data:PropTypes.any,
   label:PropTypes.string,
-  size:PropTypes.oneOf(["small", "medium", "large"])
+  size:PropTypes.oneOf(["small", "medium", "large"]),
+  mode:PropTypes.oneOf(["regular", "disabled", "cancel", "busy"])
 }
 
 
 Button.defaultProps = {
   disabled:false,
   label:"ok",
-  size:"medium"
+  size:"medium",
+  mode:"regular"
 }
 
 
