@@ -4,7 +4,7 @@ import Properties from "./Properties"
 import Highlight from 'react-highlight'
 
 
-class ButtonDocumentation extends Component {o
+class ButtonDocumentation extends Component {
 
   constructor(props) {
     super(props)

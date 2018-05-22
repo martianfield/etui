@@ -9,7 +9,7 @@ import {
 import Start from './Start'
 import ButtonDocumentation  from './doc/Button.doc'
 import ThemeDocumentation from './doc/Theme.doc'
-//import ConfirmButtonDocumentation from './doc/ConfirmButton.doc'
+import ConfirmButtonDocumentation from './doc/ConfirmButton.doc'
 //import NotificationDocumentation from './doc/Notification.doc'
 
 import "./App.css" 
@@ -22,8 +22,8 @@ export default class App extends Component {
           <div id="sidebar">
             {this.renderMenuItem("Start", "start")}
             {this.renderMenuItem("Button", "button")}
+            {this.renderMenuItem("ConfirmButton", "confirmbutton")}
             {this.renderMenuItem("Theme", "theme")}
-            {/*this.renderMenuItem("ConfirmButton", "confirmbutton")*/}
             {/*this.renderMenuItem("Notification", "notification")*/}
           </div>
           <div id="content">
@@ -31,8 +31,9 @@ export default class App extends Component {
             <Route path={process.env.PUBLIC_URL + '/start'} component={Start}/>
             <Route path={process.env.PUBLIC_URL + '/button'} component={ButtonDocumentation}/>
             <Route path={process.env.PUBLIC_URL + '/theme'} component={ThemeDocumentation}/>
-            {/*
             <Route path="/confirmbutton" component={ConfirmButtonDocumentation}/>
+            {/*
+
             <Route path="/notification" component={NotificationDocumentation} />
             */}
           </div>

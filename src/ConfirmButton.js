@@ -1,85 +1,80 @@
-/*
 import React from "react"
 import PropTypes from "prop-types"
-import { StyleSheet, css } from 'aphrodite';
-
-import cs from "./Common.aphrodite"
-import theme from "./Theme.default"
 
 class ConfirmButton extends React.Component {
-    state = {
-        mode:'closed' 
+  constructor(props) {
+    super(props)
+
+    this.state = {
+      isAsking:false
+    }
+  }
+
+  render() {
+    // text between opening and closing tag takes precedence
+    let label = (typeof this.props.children === "string") ? this.props.children : this.props.label
+    let content = null
+    if(!this.state.isAsking) {
+      content = <span className="main" onClick={this.onClick}>{label}</span>
+    }
+    else {
+      content = [
+          <span className="yes" onClick={this.onYes}>{this.props.labelYes}</span>,
+          <span className="confirm">{this.props.labelConfirm}</span>,
+          <span className="no" onClick={this.onNo}>{this.props.labelNo}</span>
+      ]
     }
 
-    render() {
-        let content = null
-        if(this.state.mode === 'closed') {
-            content = <button onClick={this.onOpen} className={css(cs.color_inverted, cs.reset, ls.button)}>{this.props.label}</button>
-        }
-        else {
-            content = [
-                <button key="yes" onClick={this.onYes} className={css(cs.reset, cs.color_inverted, ls.button)}>yes</button>,
-                <span key="question" className={css(cs.reset, cs.color_regular, ls.span)}>are you certain?</span>,
-                <button key="no" onClick={this.onNo} className={css(cs.reset, cs.color_inverted, ls.button)}>no</button>
-            ]
-        }
-        return (
-            <div className={css(cs.reset, cs.font_size_regular, ls.container)}>
-                {content}
-            </div>
-        )
-    }
+    return (
+      <div className="etui-confirmbutton size-small">
+        {content}
+      </div>
+    )
+  }
 
-    onOpen = (e) => {
-        e.preventDefault()
-        this.setState({...this.state, mode:'open'})
-    }
+  onClick = (e) => {
+    this.setState({...this.state, isAsking:true})
+  }
 
-    onNo = (e) => {
-        e.preventDefault()
-        this.setState({...this.state, mode:'closed'})
-        if(this.props.onCancel) {
-            this.props.onCancel(this.props.data)
-        }
+  onYes = (e) => {
+    if(this.props.onConfirm) {
+      this.props.onConfirm(this.props.data)
     }
+    this.setState({...this.state, isAsking:false})
+  }
 
-    onYes = (e) => {
-        e.preventDefault()
-        this.setState({...this.state, mode:'closed'})
-        if(this.props.onConfirm) {
-            this.props.onConfirm(this.props.data)
-        }
+  onNo = (e) => {
+    if(this.props.onCancel) {
+      this.props.onCancel(this.props.data)
     }
+    this.setState({...this.state, isAsking:false})
+  }
 }
 
 // Properties
 ConfirmButton.propTypes = {
-    label:PropTypes.string.isRequired,
-    data:PropTypes.any,
-    onConfirm:PropTypes.func,
-    onCancel:PropTypes.func
+  onConfirm:PropTypes.func,
+  onCancel:PropTypes.func,
+  disabled:PropTypes.bool,
+  data:PropTypes.any,
+  label:PropTypes.string.isRequired,
+  labelConfirm:PropTypes.string.isRequired,
+  labelYes:PropTypes.string.isRequired,
+  labelNo:PropTypes.string.isRequired,
+  size:PropTypes.oneOf(["small", "medium", "large"])
 }
 
-// Styling
-const ls = StyleSheet.create({
-    container : {
-        padding:"1px"
-    },
-    button: {
-        padding:"4px 8px 4px 8px",
-        cursor:"pointer",
-        backgroundColor:theme.colors.inverted.background,
-        color:theme.colors.inverted.foreground
-    },
-    span: {
-        padding:"4px 8px 3px 8px",
-        borderBottom:"1px solid",
-        borderTop:"1px solid",
-        borderColor:theme.colors.inverted.background
-    }
-})
+
+ConfirmButton.defaultProps = {
+  disabled:false,
+  label:"delete",
+  labelConfirm:'sure?',
+  labelYes:'yes',
+  labelNo:'no',
+  size:"small"
+}
+
+
 
 // and export
 export default ConfirmButton
-
-*/

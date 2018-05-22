@@ -18,6 +18,7 @@ function make() {
   }
   
   button.etui-button span {
+    border-radius:2px;
     display:inline-block;
     color:${theme.colors[theme.Button.color] || theme.Button.color};
     background-color:${theme.colors[theme.Button.backgroundColor] || theme.Button.backgroundColor};

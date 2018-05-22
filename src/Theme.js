@@ -1,6 +1,7 @@
 import defaultTheme from "./Theme.default"
 
 import ButtonCss from "./Button.css.js"
+import ConfirmButtonCss from "./ConfirmButton.css.js"
 
 let __theme = __deepClone(defaultTheme)
 let __timestamp = new Date().getTime()
@@ -22,7 +23,9 @@ function __deepClone(obj) {
 }
 
 function __mountCss() {
-  let css = ButtonCss.make()
+  let cssButton = ButtonCss.make()
+  let cssConfirmButton = ConfirmButtonCss.make()
+  let css = [cssButton, cssConfirmButton].join('')
 
   // via link
   /*
