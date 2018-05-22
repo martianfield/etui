@@ -18,7 +18,6 @@ function make() {
   }
   
   button.etui-button span {
-    border-radius:2px;
     display:inline-block;
     color:${theme.colors[theme.Button.color] || theme.Button.color};
     background-color:${theme.colors[theme.Button.backgroundColor] || theme.Button.backgroundColor};
@@ -31,16 +30,19 @@ function make() {
   }
   
   button.etui-button.size-small span {
+    border-radius:${theme.Button.border_radius_small};
     padding:4px 8px 4px 8px;
     font-size:${theme.Button.font_size_small};
   }
   
   button.etui-button.size-medium span {
+    border-radius:${theme.Button.border_radius_medium};
     padding:8px 16px 8px 16px;
     font-size:${theme.Button.font_size_medium};
   }
   
   button.etui-button.size-large span {
+    border-radius:${theme.Button.border_radius_large};
     padding:16px 32px 16px 32px;
     font-size:${theme.Button.font_size_large};
   }

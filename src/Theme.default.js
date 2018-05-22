@@ -22,7 +22,11 @@ const button = {
 
   font_size_small:"12px",
   font_size_medium:"14px",
-  font_size_large:"18px"
+  font_size_large:"18px",
+
+  border_radius_small:"8px",
+  border_radius_medium:"4px",
+  border_radius_large:"2px",
 }
 
 const confirmButton = {
@@ -42,8 +46,8 @@ const confirmButton = {
   font_size_medium:"14px",
   font_size_large:"18px",
 
-  border_radius_small:"2px",
-  border_radius_medium:"2px",
+  border_radius_small:"8px",
+  border_radius_medium:"4px",
   border_radius_large:"2px",
 }
 
