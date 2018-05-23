@@ -15,7 +15,7 @@ class ConfirmButton extends React.Component {
     let label = (typeof this.props.children === "string") ? this.props.children : this.props.label
     let content = null
     if(!this.state.isAsking) {
-      content = <span className="main" onClick={this.onClick}>{label}</span>
+      content = <span className={`main ${this.props.disabled ? 'disabled':''}`} onClick={this.onClick}>{label}</span>
     }
     else {
       content = [
@@ -33,7 +33,9 @@ class ConfirmButton extends React.Component {
   }
 
   onClick = (e) => {
-    this.setState({...this.state, isAsking:true})
+    if(!this.props.disabled) {
+      this.setState({...this.state, isAsking:true})
+    }
   }
 
   onYes = (e) => {

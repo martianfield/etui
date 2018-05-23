@@ -33,6 +33,9 @@ const confirmButton = {
   backgroundColor:"primary_background",
   color:"primary_text",
 
+  backgroundColor_disabled:"primary_background_disabled",
+  color_disabled:"primary_text_disabled",
+
   backgroundColor_yes:"primary_background",
   color_yes:"primary_text",
 

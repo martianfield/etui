@@ -20,6 +20,12 @@ function make() {
     color:${theme.colors[theme.ConfirmButton.color] || theme.ConfirmButton.color};
     background-color:${theme.colors[theme.ConfirmButton.backgroundColor] || theme.ConfirmButton.backgroundColor}; 
   }
+  div.etui-confirmbutton span.main.disabled {
+    color:${theme.colors[theme.ConfirmButton.color_disabled] || theme.ConfirmButton.color_disabled};
+    background-color:${theme.colors[theme.ConfirmButton.backgroundColor_disabled] || theme.ConfirmButton.backgroundColor_disabled};
+    cursor:not-allowed;
+  }
+  
   div.etui-confirmbutton span.yes {
     color:${theme.colors[theme.ConfirmButton.color_yes] || theme.ConfirmButton.color_yes};
     background-color:${theme.colors[theme.ConfirmButton.backgroundColor_yes] || theme.ConfirmButton.backgroundColor_yes}; 

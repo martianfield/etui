@@ -4,7 +4,6 @@ import Properties from "./Properties"
 import Events from "./Events"
 import Highlight from 'react-highlight'
 
-
 class ConfirmButtonDocumentation extends Component {
 
   constructor(props) {
@@ -37,6 +36,9 @@ class ConfirmButtonDocumentation extends Component {
           {code_basic}
         </Highlight>
         <ConfirmButton label="delete" onConfirm={this.onConfirm} onCancel={this.onCancel} data={{foo:"bar"}} />
+        <h2>Disabled</h2>
+        <Highlight language="javascript">{code_disabled}</Highlight>
+        <ConfirmButton disabled label="this is disabled" onConfirm={this.onConfirm} />
       </div>
     )
   }
@@ -63,5 +65,9 @@ onConfirm = (data) => {
 onCancel = (data) => {
   console.log('canceled. data:', data)
 }
+`
+
+const code_disabled = `
+<ConfirmButton disabled label="this is disabled" onConfirm={this.onConfirm} />
 `
 
