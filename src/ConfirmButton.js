@@ -19,14 +19,14 @@ class ConfirmButton extends React.Component {
     }
     else {
       content = [
-          <span className="yes" onClick={this.onYes}>{this.props.labelYes}</span>,
-          <span className="confirm">{this.props.labelConfirm}</span>,
-          <span className="no" onClick={this.onNo}>{this.props.labelNo}</span>
+          <span key="yes" className="yes" onClick={this.onYes}>{this.props.labelYes}</span>,
+          <span key="confirm" className="confirm">{this.props.labelConfirm}</span>,
+          <span key="no" className="no" onClick={this.onNo}>{this.props.labelNo}</span>
       ]
     }
 
     return (
-      <div className="etui-confirmbutton size-small">
+      <div className={`etui-confirmbutton size-${this.props.size}`}>
         {content}
       </div>
     )
