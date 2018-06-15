@@ -1,7 +1,9 @@
 import defaultTheme from "./Theme.default"
 
 import ButtonCss from "./Button.css.js"
+import CheckboxCss from "./Checkbox.css.js"
 import ConfirmButtonCss from "./ConfirmButton.css.js"
+import LabelCss from "./Label.css.js"
 
 let __theme = __deepClone(defaultTheme)
 let __timestamp = new Date().getTime()
@@ -24,17 +26,10 @@ function __deepClone(obj) {
 
 function __mountCss() {
   let cssButton = ButtonCss.make()
+  let cssCheckbox = CheckboxCss.make()
   let cssConfirmButton = ConfirmButtonCss.make()
-  let css = [cssButton, cssConfirmButton].join('')
-
-  // via link
-  /*
-  let link = document.createElement('link')
-  link.setAttribute('type', 'text/css')
-  link.setAttribute('rel', 'stylesheet')
-  link.setAttribute('href', `data:text/css;charset=UTF-8,${encodeURIComponent(css)}`)
-  document.getElementsByTagName("head")[0].appendChild(link)
-  */
+  let cssLabel = LabelCss.make()
+  let css = [cssButton, cssCheckbox, cssConfirmButton, cssLabel].join('')
 
   let head = document.getElementsByTagName("head")[0]
 

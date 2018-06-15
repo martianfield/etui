@@ -54,8 +54,14 @@ const confirmButton = {
   border_radius_large:"2px",
 }
 
+const checkbox = {
+  color:"primary_background",
+  color_disabled:"primary_background_disabled",
+}
+
 export default {
   colors:colors,
   Button:button,
-  ConfirmButton:confirmButton
+  ConfirmButton:confirmButton,
+  Checkbox:checkbox
 }
