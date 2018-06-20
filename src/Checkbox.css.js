@@ -14,7 +14,7 @@ function make() {
   div.etui-checkbox .label {
     font-size:14px;
     user-select:none;
-    color:${theme.colors[theme.Checkbox.color] || theme.Checkbox.color};
+    color:${theme.colors[theme.Checkbox.color_label] || theme.Checkbox.color_label};
   }
   
   div.etui-checkbox.label-position-top,
@@ -50,8 +50,13 @@ function make() {
     top:0; left:0;
     width:16px;
     height:16px;
-    border:1px solid ${theme.colors[theme.Checkbox.color] || theme.Checkbox.color};
+    background-color: ${theme.colors[theme.Checkbox.color_checkmark] || theme.Checkbox.color_checkmark};
+    border:1px solid ${theme.colors[theme.Checkbox.color_box] || theme.Checkbox.color_box};
     border-radius:2px;
+  }
+  
+  div.etui-checkbox .checkbox.checked .box {
+    background-color: ${theme.colors[theme.Checkbox.color_box] || theme.Checkbox.color_box};
   }
   
   div.etui-checkbox .checkbox .mark {
@@ -70,7 +75,7 @@ function make() {
     height: 8px;
  
     /*Add a white border on the bottom and left, creating that 'L' */
-    border: solid ${theme.colors[theme.Checkbox.color] || theme.Checkbox.color};
+    border: solid ${theme.colors[theme.Checkbox.color_checkmark] || theme.Checkbox.color_checkmark};
     border-width: 0 2px 2px 0;
  
     /*Rotate the L 45 degrees to turn it into a checkmark*/

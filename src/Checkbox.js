@@ -9,11 +9,15 @@ class Checkbox extends React.Component {
   }
 
   render() {
-    let label = this.props.label ? <div className="label" onClick={this.onClick}>{this.props.label}</div> : null
+    let labelStyle = {}
+    if(this.props.colorLabel) {
+      labelStyle["color"] = this.props.colorLabel
+    }
+    let label = this.props.label ? <div className="label" onClick={this.onClick} style={labelStyle}>{this.props.label}</div> : null
     return (
       <div className={`etui-checkbox label-position-${this.props.labelPosition}`}>
         {this.props.labelPosition === "top" || this.props.labelPosition === "left" ? label : null}
-        <div className="checkbox">
+        <div className={`checkbox ${this.state.checked ? 'checked':''}`}>
           <div className="box" onClick={this.onClick} id={this.props.id}></div>
           {this.state.checked ? <div className="mark" onClick={this.onClick}></div> : null}
         </div>
@@ -72,13 +76,15 @@ Checkbox.propTypes = {
   data:PropTypes.any,
   id:PropTypes.string,
   label:PropTypes.string,
-  labelPosition:PropTypes.oneOf(["top", "right", "bottom", "left"])
+  labelPosition:PropTypes.oneOf(["top", "right", "bottom", "left"]),
+  colorLabel:PropTypes.string
 }
 
 Checkbox.defaultProps = {
   entity:{"checked":true},
   property:"checked",
   labelPosition:"right"
+
 }
 
 export default Checkbox

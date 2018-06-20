@@ -1,5 +1,7 @@
+let pink = "#fa569f"
+
 let colors = {
-  primary_background:"#fa569f",
+  primary_background:pink,
   primary_text:"white",
   primary_background_disabled:"silver",
   primary_text_disabled:"white",
@@ -55,8 +57,9 @@ const confirmButton = {
 }
 
 const checkbox = {
-  color:"primary_background",
-  color_disabled:"primary_background_disabled",
+  color_box:pink,
+  color_checkmark:"#ffffff",
+  color_label:pink
 }
 
 export default {
