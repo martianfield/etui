@@ -12,7 +12,7 @@ import ThemeDocumentation from './doc/Theme.doc'
 import WatcherDocumentation from './doc/Watcher.doc'
 import ConfirmButtonDocumentation from './doc/ConfirmButton.doc'
 import CheckboxDocumentation from './doc/Checkbox.doc'
-//import NotificationDocumentation from './doc/Notification.doc'
+import NotificationDocumentation from './doc/Notification.doc'
 
 import "./App.css" 
 
@@ -28,7 +28,7 @@ export default class App extends Component {
             {this.renderMenuItem("Checkbox", "checkbox")}
             {this.renderMenuItem("Theme", "theme")}
             {this.renderMenuItem("Watcher", "watcher")}
-            {/*this.renderMenuItem("Notification", "notification")*/}
+            {this.renderMenuItem("Notification", "notification")}
           </div>
           <div id="content">
             <Route exact path={process.env.PUBLIC_URL + '/'} component={Start}/>
@@ -38,10 +38,10 @@ export default class App extends Component {
             <Route path={process.env.PUBLIC_URL + '/checkbox'} component={CheckboxDocumentation}/>
             <Route path={process.env.PUBLIC_URL + '/theme'} component={ThemeDocumentation}/>
             <Route path={process.env.PUBLIC_URL + '/watcher'} component={WatcherDocumentation}/>
-
+            <Route path={process.env.PUBLIC_URL + '/notification'} component={NotificationDocumentation} />
             {/*
 
-            <Route path="/notification" component={NotificationDocumentation} />
+
             */}
           </div>
         </div>

@@ -4,6 +4,7 @@ import ButtonCss from "./Button.css.js"
 import CheckboxCss from "./Checkbox.css.js"
 import ConfirmButtonCss from "./ConfirmButton.css.js"
 import LabelCss from "./Label.css.js"
+import NotificationCss from "./Notification.css.js"
 
 let __theme = __deepClone(defaultTheme)
 let __timestamp = new Date().getTime()
@@ -29,7 +30,8 @@ function __mountCss() {
   let cssCheckbox = CheckboxCss.make()
   let cssConfirmButton = ConfirmButtonCss.make()
   let cssLabel = LabelCss.make()
-  let css = [cssButton, cssCheckbox, cssConfirmButton, cssLabel].join('')
+  let cssNotification = NotificationCss.make()
+  let css = [cssButton, cssCheckbox, cssConfirmButton, cssLabel, cssNotification].join('')
 
   let head = document.getElementsByTagName("head")[0]
 

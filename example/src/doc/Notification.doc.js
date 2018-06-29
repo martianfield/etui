@@ -1,4 +1,3 @@
-/*
 import React, { Component } from 'react'
 
 import {Button, Notification, NotificationCenter} from 'etui'
@@ -32,4 +31,3 @@ class NotificationDocumentation extends Component {
 }
 
 export default NotificationDocumentation
-*/
