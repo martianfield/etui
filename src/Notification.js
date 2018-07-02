@@ -49,7 +49,7 @@ class Notification extends React.Component {
   }
 
   showNotification() {
-    if(this.messages.length > 0 && !this.active) {
+    if(this.messages.length > 0 && !this.active && this.ref_message && this.ref_container) {
       this.active = true
 
       let message = this.messages.shift()
